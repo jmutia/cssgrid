@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #dcdcdc;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+div.container {
+  padding: 0;
+}
+#main-nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+#main-nav li {
+  display: inline;
+  padding-left: 15px;
+}
+#main-header a, #main-nav a {
+  text-decoration: none;
+  color: #212121;
+}
+#container-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#container-1 > .grid {
+  padding: 10px;
+}
+#container-2 {
+  background-color: #dcdcdc;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  grid-auto-rows: minmax(100px, auto);
+  overflow: hidden;
+  padding: 0;
+}
+#container-2 #section-1 {
+  background-image: url("../images/projects_old-showcasebg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-color: #dcdcdc;
+  box-sizing: border-box;
+  padding-top: 100px;
+  height: 400px;
+
+}
+#container-2 #section-2 {
+  background-color: #42a5f5;
+  box-sizing: border-box;
+}
+#container-2 h1, #container-2 p {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+#container-3.container {
+  padding: 10px;
+}
+
+/*--media queries--*/
+@media(max-width: 700px) {
+  #container-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main-header"
+      "main-nav"
+  }
+  #container-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "section-1"
+      "section-2"
+  }
+  #container-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main-footer"
+  }
+  #container-2 #section-1 {
+    background-image: url("../images/projects_old-showcasebg.jpeg");
+    background-size: cover;
+    background-position: bottom right;
+    background-color: #dcdcdc;
+    box-sizing: border-box;
+    align-self: center;
+    height: 400px;
+  }
+  #main-nav ul {
+    text-align: center;
+  }
+  #main-nav li {
+    padding: 8px;
+  }
+  #container-2 h1, #container-2 p {
+    margin: 0;
+    padding: 10px;
+  }
+  #main-footer.container {
+    text-align: center;
+  }
+}
